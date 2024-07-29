@@ -1,0 +1,450 @@
+//Crie a estrutura HTML para o reprodutor de áudio da seguinte maneira.
+//Você pode modificar a lista de reprodução adicionando ou removendo <li>elementos dentro do playlist-wrapelemento. Cada <li>elemento representa uma faixa na lista de reprodução. Personalize o hrefatributo para especificar o URL do arquivo de áudio e o conteúdo de texto do <a>elemento para definir o nome da faixa.
+
+<div class = "page" > 
+<div class = "player-wrap" data-url = "//archive.org/download/mythium/JLS_ATI" data-title = "Tudo isso é - Estúdio de Joe L." >
+<div class = "button" > Tocar </div> <div class = "info" > <h1> Álbum: Mythium </h1> <p class = "action" >   
+</p> <p class = "reticências de título" </p> </div> <div class = "player" > <audio preload </audio> <div class = "playpause" >
+<div class = " reproduzir" ><svg viewBox = "0 0 14 14" ><caminho d = "M0,0 L0,14 L11,7 L0,0 Z" /></svg></div> <div class = "pause" ><svg viewBox = "0 0 14 14" ><caminho d = "M0,14 L4,14 L4,0 L0,0 L0,14 L0,14 Z M8,0 L8,14 L12,14 L12,0 L8, 0 L8,0 Z" /></svg></div> </div> <div class = "timer" > <div class = "atual" > 0:00:00 </div> <div> / < /div> <div class = "duration" > 0:00:00 </div> </div> <div><input type = "range" min = "0" max = "100" step = ". 
+
+//Agora, use o seguinte código CSS para estilizar o reprodutor de áudio. Você pode personalizar ainda mais o estilo visual do reprodutor de áudio e da lista de reprodução modificando os estilos CSS.
+
+/* >> reset */ 
+html , body , div , span , h1 , p , a , ol , li , audio { 
+	border : 0 ; 
+	fonte : herdar ; 
+	fonte - tamanho : 100 %; 
+	margem : 0 ; 
+	preenchimento : 0 ; alinhamento 
+	vertical : linha de base ; } 
+ol { estilo de 
+	lista : nenhum ; 
+	margem : 0 ; 
+	preenchimento : 0 ; } 
+ol li { 
+	margem : 0 ; estilo de 
+	lista : decimal fora ; } * { -webkit - tap - destaque - cor : rgba ( 0,0,0,0 ) ; _ _ _ _ _ _ - webkit - tap - destaque - cor : transparente ; } 
+html , corpo { 
+	margem : 0 ; 
+	preenchimento : 0 ; 
+	altura : 100 %; } 
+corpo { 
+	preenchimento : 5px 0 ; 
+	histórico : #111; 
+	fonte : 20px / 24px ' Helvetica' , 'Arial' , sem serifa ; 
+	cor : #eee; } 
+a , a : foco , a : ativo , a : pairar , a : visitado { 
+	text - decoration : none ; } 
+a [ href    
+  
+  
+
+ 
+	
+	
+   
+       
+
+], a [ href ]: ativo , a [ href ]: visitado { 
+	color : #ddd; 
+	contorno : 0 nenhum ; decoração de 
+	texto : sublinhado ; } 
+a [ href ]: pairar , a [ href ]: foco { 
+	cor : #bbb; } /* << redefinir */  
+ 
+
+
+
+/* estilo da página */ . página { 
+	posição : relativa ; 
+	margem : 0 automático ; 
+	largura : 70 %; largura 
+	mínima : 300px ; _ largura 
+	máxima : 700px ; _ } . reticências { 
+  estouro : oculto ; estouro de 
+  texto : reticências ; espaço em 
+  branco : nowrap ; }
+     
+
+
+
+
+/* Reprodutor de áudio */ . player - wrap { 
+	posição : relativa ; 
+	margem : 0 0 1em ; 
+	preenchimento : 0 ; 
+	fundo - cor : #222; } . jogador - embrulhar . ativado { 
+	preenchimento - inferior : 4em ; } . jogador - embrulhar . botão { float : esquerda ; 
+	exibição : nenhum ; 
+	margem : 1,5em 2em ; 
+	largura : 5em ; 
+	altura : 5em ; 
+	fundo - cor : #333; altura da 
+	linha : 5em ; alinhamento de 
+	texto : centro ; 
+	borda - raio : 25 %; } . jogador - embrulhar . botão : pairar { 
+  background - color : #444; 
+	cursor : ponteiro ; } . jogador - embrulhar . habilitado . botão { 
+	display : bloco ; } . jogador - embrulhar . info { 
+	margem - esquerda : 10em ; } . jogador - wrap h1 { 
+	preenchimento : 1,5em 0 ; } . jogador - embrulhar . ação { estilo da 
+	fonte : itálico ; } . jogador - embrulhar . jogador { 
+	posição : absoluto ; 
+  exibição : nenhum ; 
+	esquerda : 0
+     
+
+ 
+
+
+	       
+
+ 
+
+
+
+ 
+
+  
+
+
+
+ ; 
+	inferior : 0 ; 
+	preenchimento : 0 1em 0 6em ; 
+	largura : 100 %; 
+	altura : 1em ; 
+	fundo - cor : #333; tamanho da 
+	fonte : 2em ; dimensionamento da 
+	caixa : caixa de borda ; } . jogador - embrulhar . habilitado . jogador { 
+	display : bloco ; } . jogador - embrulhar . jogador svg { 
+	margem : . 25h ; 
+	largura : . 5h ; 
+	altura : . 5h ; 
+	preenchimento : cor atual ; } . jogador - embrulhar . jogador div { 
+	exibição : bloco ; 
+	altura : 1em ; } . player - wrap áudio , . jogador - embrulhar . jogador . pausa { 
+	exibição : nenhum ; } . jogador - embrulhar . pausa na reprodução , . jogador - embrulhar . temporizador , . jogador - embrulhar . anterior , . jogador - embrulhar . próximo { 
+	posição : absoluto ; 
+	esquerda : 0 ; 
+	inferior : 0 ; 
+	exibição : bloco ; 
+	altura : 1em ; altura da 
+	linha : 1em ; alinhamento 
+	vertical : topo ; _ alinhamento de 
+	texto : centro ; } .         
+
+
+
+   
+
+ 
+
+
+
+
+ 
+      
+
+jogador - embrulhar . pausa na reprodução , . jogador - embrulhar . anterior , . jogador - embrulhar . próximo { 
+	largura : 1em ; 
+	cursor : ponteiro ; } . jogador - embrulhar . playpause { 
+	esquerda : 1em ; } . jogador - embrulhar . próximo { 
+	esquerda : auto ; 
+	direita : 0 ; } . jogador - embrulhar . pausa de reprodução : pairar , . jogador - embrulhar . anterior : passe o mouse , . jogador - embrulhar . próximo : hover { 
+	background - color : #444; } . jogador - embrulhar . pausa na reprodução , . jogador - embrulhar . jogar , . jogador - embrulhar . pausa , . jogador - embrulhar . anterior ::- moz - foco - interno , . jogador - embrulhar . próximo ::- moz - focus - inner { 
+	border : 0 ; 
+	preenchimento : 0 ; } . jogador - embrulhar . temporizador { 
+	esquerda : 2em ; 
+	largura : 4em ; } . jogador - embrulhar . timer div { 
+	display : inline - block ; 
+	altura : 100 %; alinhamento 
+	vertical : topo ; _ 
+	Fonte
+   
+
+ 
+
+   
+
+
+  
+
+  
+
+  
+
+  
+
+  - tamanho : . 45em ; } . jogador - embrulhar . seek { 
+	box - sizing : border - box ; 
+	margem : 0 ; 
+	preenchimento : 0 ; 
+	largura : 100 %; 
+	altura : 100 %; } . lista de reprodução - wrap { 
+	background - color : #222; } . lista de reprodução - wrap li { 
+	margem : 0 0 0 3em ; 
+	preenchimento : . 25h00 . _ 25h . 5h ; estilo de 
+	lista : decimal fora ; } . lista de reprodução - envolva li . sel { 
+	fundo - cor : #333; } . lista de reprodução - wrap li : hover { 
+	background - color : #444; } 
+
+    
+
+ 
+
+         
+
+ 
+
+ 
+
+
+/* >> input[type=range] classe: busca */ 
+input . seek [ type = range ] { dimensionamento da 
+	caixa : border - box ; cor de 
+	fundo : transparente ; alinhamento 
+	vertical : topo ; _ tamanho da 
+	fonte : 1em ; -webkit -aparência : nenhum ; _ _ } 
+entrada . procure [ tipo = intervalo ]: foco { 
+	contorno : nenhum ; } 
+entrada . seek [ type = range ] :: - webkit -slider -runnable -track { 
+	box - sizing : border - box ; _ 
+	largura : 98 %; 
+	altura : . 17h ; 
+	fundo - cor : #eee; 
+	cursor : ponteiro ; 
+	raio da borda : . 1em ; 
+	transição : todos . 2s facilidade ; } 
+entrada . seek [ type = range ] :: - webkit -slider -thumb { 
+	box - sizing : border - box ; 
+	largura : . 17h ; 
+	altura : . 7h ; 
+	margem - topo : -. 27h ; 
+	raio da borda : . 1em ; 
+	fundo - cor : #eee; 
+	cursor : ponteiro ; -webkit -aparência : nenhum ; _ _ } 
+entrada .  
+	
+
+    
+     
+	
+seek [ type = range ]: focus ::- webkit - slider - runnable - track { 
+	background - color : #eee; } 
+entrada . seek [ type = range ] :: - moz -range -track { 
+	box - sizing : border - box ; 
+	borda : 0 sólido #eee; 
+	largura : 98 %; 
+	altura : . 17h ; 
+	fundo - cor : #eee; 
+	cursor : ponteiro ; 
+	raio da borda : . 1em ; 
+	transição : todos . 2s facilidade ; } 
+entrada . seek [ type = range ] :: - moz -range -thumb { 
+	box - sizing : border - box ; 
+	borda : 0 sólido #eee; 
+	largura : . 17h ; 
+	altura : . 7h ; 
+	fundo - cor : #eee; 
+	cursor : ponteiro ; 
+	raio da borda : . 1em ; } 
+entrada . seek [ type = range ] ::- ms -track { 
+	box - sizing : border - box ; 
+	borda : 0 nenhum ; 
+	largura : 98 %; 
+	altura : . 17h ; cor de 
+	fundo : transparente ; 
+	cor : transparente ; 
+	cursor 
+     
+     
+   : ponteiro ; 
+	transição : todos . 2s facilidade ; } 
+entrada . procure [ tipo = intervalo ]::- ms - fill - lower { 
+	background - color : #eee; 
+	raio da borda : . 1em ; } 
+entrada . procure [ tipo = intervalo ]::- ms - fill - superior { 
+	background - color : #eee; 
+	raio da borda : . 1em ; } 
+entrada . procure [ tipo = intervalo ]::- ms - polegar { 
+	margem - topo : -. 01em ; dimensionamento da 
+	caixa : caixa de borda ; 
+	largura : . 17h ; 
+	altura : . 7h ; 
+	fundo - cor : #eee; 
+	cursor : ponteiro ; 
+	raio da borda : . 1em ; } 
+entrada . procure [ tipo = intervalo ]: foco ::- ms - preenchimento - inferior { 
+	fundo - cor : #eee; } 
+entrada . procure [ tipo = intervalo ]: foco ::- ms - preenchimento - superior { 
+	fundo - cor : #eee; } /* << entrada[tipo=intervalo] classe: busca */
+
+//Por fim, adicione o seguinte JavaScript ao seu projeto para ativar o reprodutor de áudio.
+
+// Player de áudio HTML5 + controles da lista de reprodução var jsPlayer = document . querySelector ( '.player-wrap' ); if ( jsPlayer ) { 
+	jsPlayer = { 
+		wrap : jsPlayer , 
+		player : ( jsPlayer . querySelector ( 'audio' ) || { play : function (){}, pause : function (){} }), 
+		play : ( jsPlayer . querySelector ( '.play' ) || {}), 
+		pausa : ( jsPlayer . querySelector ( '.pause' ) || {}), 
+		busca : ( jsPlayer . querySelector ( '.seek' ) || {}), 
+		anterior : ( jsPlayer . querySelector ( '.prev' ) || {}), 
+		próximo : ( jsPlayer . querySelector ( '.next' ) || {}), 
+		botão : ( jsPlayer . querySelector ( '.button' ) || { estilo : {} }), 
+		wrapList : ( document . querySelector ( '.playlist-wrap' ) || {}), 
+		ação : ( jsPlayer . querySelector ( '.action' ) || {}), 
+		título : ( jsPlayer . querySelector ( '.title' ) || {}), 
+		atual : ( jsPlayer . querySelector ( '.current' ) || {}), 
+		duração : ( jsPlayer . querySelector ( '.duration' ) || {}), 
+		trackCount :
+
+                                             0 , 
+    buscando : null , 
+		tocando : false , 
+		trilhas : [], 
+		trilha : [], 
+		idx : 0 };     
+	
+
+	jsPlayer . playClicked = função jsPlayerPlayClicked (){ 
+		jsPlayer . botão . estilo . visibilidade = 'oculto' ; 
+		jsPlayer . pausa . estilo . display = 'bloco' ; 
+		jsPlayer . jogar . estilo . exibir = 'nenhum' ; 
+		jsPlayer . jogando = verdadeiro ; 
+		jsPlayer . ação . innerHTML = 'Em reprodução...' ; 
+		jsPlayer . jogador . jogar (); 
+		jsPlayer . atualizarSeek (); }; 
+	jsPlayer . pauseClicked = função jsPlayerPauseClicked (){ 
+		jsPlayer . jogar . estilo . display = 'bloco' ; 
+		jsPlayer . pausa . estilo . exibir = 'nenhum' ; 
+		clearTimeout ( jsPlayer.buscando ) ; _ 
+		jsPlayer . jogando = falso ; 
+		jsPlayer . ação . innerHTML = 'Pausado…' ; 
+		jsPlayer . jogador . pausa (); }; 
+	jsPlayer . loadPlaylist = função jaPlayerLoadPlaylist (){ 
+		jsPlayer . lista de reprodução = jsPlayer . wrapList ? jsPlayer . wrapList . querySelectorAll ( 'ol > li' ) : []; var len = jsPlayer . lista de reprodução . comprimento , 
+			tmp , eu ; for ( i = 0 ; i < len ; i ++) { se      
+	     
+	   
+		
+		   
+			 (! jsPlayer.lista de reprodução [ i ].conjunto de dados ) { 
+				jsPlayer . lista de reprodução [ eu ]. conjunto de dados = {}; } 
+			tmp = jsPlayer . lista de reprodução [ eu ]. querySelector ( 'a' ); if ( tmp && ! jsPlayer . playlist [ i ]. conjunto de dados . idx ) { 
+				jsPlayer . lista de reprodução [ eu ]. conjunto de dados . idx = eu + 1 ; 
+				jsPlayer . contagem de trilhas ++; 
+				jsPlayer . faixas . push ({ "arquivo" : tmp . href , "nome" : ( tmp . textContent || tmp . innerText ). substituir ( /^\s+|\s+$/ g , '' ), "track" : i + 1 }); } } }; 
+	jsPlayer . loadTrack = função jsPlayerLoadTrack ( idx ){ var len = jsPlayer . lista de reprodução . comprimento , 
+			eu ; for ( i = 0 ; i < len ; i ++) { if ( jsPlayer . playlist [ i ]. classList ) { if ( i === idx ) { 
+					jsPlayer . lista de reprodução [ eu ]. lista de classes . adicionar ( 'sel' ); } else { 
+					jsPlayer . lista de reprodução [ eu ]. lista de classes . remover (  
+			
+			    
+			'sel' ); } } } 
+		jsPlayer . título . innerHTML = jsPlayer . faixas [ idx ]. nome ; 
+		jsPlayer . jogador . src = jsPlayer . faixas [ idx ]. arquivo + '.mp3' ; }; 
+	jsPlayer . playTrack = função jsPlayerPlayTrack ( idx ){ 
+		jsPlayer . carregarTrack ( idx ); 
+		jsPlayer . jogando = verdadeiro ; 
+		jsPlayer . playClicked (); }; 
+	jsPlayer . init = function jsPlayerInit (){ var track = ( jsPlayer . wrap && jsPlayer . wrap . dataset && jsPlayer . wrap . dataset . url )? jsPlayer . wrap : null , 
+			tmp , i ; if (!! document . createElement ( 'audio' ). canPlayType ( 'audio/mpeg' )) { if ( jsPlayer . wrapList && jsPlayer . wrapList . querySelectorAll ( 'ol > li' ). length > 0 ) { 
+				jsPlayer . carregarPlaylist (); } else if ( track ) { 
+				jsPlayer . trilhas = [{ "arquivo" : trilha . conjunto de dados . url , "nome" : ( faixa . conjunto de dados . título || '' ), "faixa" : 1 }]; } se (
+				
+			
+		jsPlayer . faixas . comprimento > 0 ) { if ( jsPlayer . player ) { 
+					jsPlayer . jogador . addEventListener ( 'ended' , function playerEnded () { if ( jsPlayer . idx + 1 < jsPlayer . trackCount ) { 
+							jsPlayer . idx ++; 
+							jsPlayer . playTrack ( jsPlayer . idx ); } else { 
+							jsPlayer . action . innerHTML = 'Pausado&hellip ; ' ; 
+							jsPlayer .player .pause ( ); jsPlayer 
+							.idx = 0 ; jsPlayer 
+							.loadTrack ( jsPlayer .idx ) ; } } , true ) ; 
+					jsPlayer . jogador . addEventListener ( 'loadeddata' , função playerLoadeddata (){ 
+						jsPlayer . setDuration (); }, true ); } if ( jsPlayer . play ) { 
+					jsPlayer . jogar . addEventListener ( 'clique' , jsPlayer . playClicked , verdadeiro ); } if ( jsPlayer.pause ) { 
+					jsPlayer . _ _ pausa . addEventListener ( 'clique' , jsPlayer . pauseClicked , verdadeiro ); } if ( jsPlayer . botão ) { 
+					jsPlayer . botão . addEventListener ( 'clique' , função buttonClicked ( evento ){  
+				   
+						    
+					evento . preventDefault (); 
+						jsPlayer . playClicked (); }, verdadeiro ); } if ( jsPlayer.prev ) { 
+					jsPlayer . _ _ anterior . addEventListener ( ' clique ' , função prevClicked ( evento ) { 
+						evento.prevenDefault ( ) ; if ( jsPlayer.idx - 1 > - 1 ) { 
+							jsPlayer.idx - ; 
+							jsPlayer.loadTrack ( jsPlayer.idx ) ; if ( jsPlayer.jogando _ _ _ _ _ ) { 
+								jsPlayer .action .innerHTML = ' Em reprodução & hellip ; ' ; 
+								jsPlayer .player .play ( ) ; } } else { 
+							jsPlayer .action .innerHTML = 'Pausado&hellip ; ' ; jsPlayer 
+							.playing = false ; jsPlayer 
+							.player .pause ( ) ; 
+							jsPlayer.idx = 0 ; 
+							jsPlayer.loadTrack ( jsPlayer.idx ) ; } } , true ) ; _ _ _ } if ( jsPlayer.next ) { 
+					jsPlayer . _ _ próximo . addEventListener ( ' clique ' , função nextClicked ( evento ) { 
+						evento.prevenDefault ( ) ; if ( jsPlayer.idx + 1 < jsPlayer.trackCount ) { 
+							jsPlayer.idx ++ ; 
+							jsPlayer.loadTrack ( _ _ _ _
+					 
+				
+			jsPlayer . idx ); if ( jsPlayer.jogando ) { 
+								jsPlayer . _ _ ação . innerHTML = 'Em reprodução...' ; 
+								jsPlayer . jogador . jogar (); } } else { 
+							jsPlayer . ação . innerHTML = 'Pausado…' ; 
+							jsPlayer . jogando = falso ; 
+							jsPlayer . jogador . pausa (); 
+							jsPlayer . idx = 0 ; 
+							jsPlayer . loadTrack ( jsPlayer.idx ) ; _ } }, verdadeiro ); } if ( jsPlayer.seek ) { 
+					jsPlayer . _ _ procure . addEventListener ( 'mousedown' , função seekClicked (){ 
+						clearTimeout ( jsPlayer . Procurando ); 
+						jsPlayer . action . innerHTML = 'Paused…' ; 
+						jsPlayer . player . pause (); }, true ); 
+					jsPlayer . procure . addEventListener ( 'mouseup' , function seekReleased (){ 
+						jsPlayer . player . currentTime = jsPlayer . seek . value * jsPlayer . player . Duration / 100 ; 
+						jsPlayer . updateSeek (); if ( jsPlayer . Playing ) { 
+							jsPlayer . action . innerHTML = 'Em execução...' ; 
+							jsPlayer . player . play (); }
+							   
+							
+						     }, verdadeiro ); } if ( jsPlayer . wrapList ) { 
+					jsPlayer . wrapList . addEventListener ( 'click' , função listClicked ( evento ) { var parent = event . target . parentNode ; if ( parent . parentNode . tagName . toLowerCase () === 'ol' ) { 
+							event . preventDefault (); var len = jsPlayer .playlist .length , 
+							i ; for ( i = 0 ; i < len ; i ++ ) { if ( parent . dataset . idx == i + 1 ) { jsPlayer . idx = i ; 
+									jsPlayer .playTrack ( 
+									jsPlayer . idx ) _ _ ; 
+									i = len ; } } } }, true ); } 
+				jsPlayer . setDuration = function setDuration () { 
+					jsPlayer . duração . innerHTML = jsPlayer . formatTime ( jsPlayer.player.duração ) ; _ _ _ 
+					jsPlayer . atual . innerHTML = jsPlayer . formatTime ( jsPlayer . player . currentTime ); 
+					jsPlayer . procure . valor = jsPlayer . jogador . currentTime / jsPlayer . jogador . duração ; }; 
+				jsPlayer 
+				
+				   . updateSeek = função updateSeek () { 
+					jsPlayer . procure . valor = 100 * jsPlayer . jogador . currentTime / jsPlayer . jogador . duração ; 
+					jsPlayer . atual . innerHTML = jsPlayer . formatTime ( jsPlayer . player . currentTime ); if ( jsPlayer.jogando ) { 
+						jsPlayer . _ _ buscando = setTimeout ( jsPlayer.updateSeek , 500 ) ; _ } }; 
+				jsPlayer . formatTime = função formatTime ( val ) { var h = 0 , m = 0 , s ; 
+					val = parseInt ( val , 10 ); if ( val > 60 * 60 ) { 
+						h = parseInt ( val / ( 60 * 60 ), 10 ); 
+						val -= h * 60 * 60 ; } if ( val > 60 ) { 
+						m = parseInt ( val / 60 , 10 ); 
+						valor -= m * 60 ; } 
+					s = valor ; 
+					val = ( h > 0 )? h + ':' : '' ; 
+					val += ( m > 0 )? (( m < 10 && h > 0 )? '0' :    
+					   
+				  '' ) + m + ':' : '0:' ; 
+					val += (( s < 10 )? '0' : '' ) + s ; valor de retorno ; }; } } if ( jsPlayer.tracks.length > 0 ) { jsPlayer . _ _ _ 
+			_ embrulhar . className += 'habilitado' ; 
+			jsPlayer . loadTrack ( jsPlayer.idx ) ; _ } }; 
+	jsPlayer . iniciar (); }          
+					
+	  	   
+	
+			 
+			 
+			 
+			 
+		
+	
