@@ -1,0 +1,60 @@
+  <!--Menu-->
+    <nav class="navbar">
+        <ul>
+            <li>
+                
+                <a href="#">
+                    <i class="fa fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            
+            <li>
+            
+                <a href="#">
+                    <i class="fa fa-image"></i>
+                    <span>Galeria de Fotos</span>
+                </a>
+            
+            </li>
+            <li>
+            
+                <a href="#">
+                    <i class="fa fa-cube"></i>
+                    <span>Blog</span>
+                </a>
+            
+            </li>
+            
+            <li>
+            
+                <a href="#">
+                    <i class="fa fa-folder"></i>
+                    <span>Portfólio</span>
+                </a>
+            
+            </li> 
+            <li>
+            
+                <a href="#">
+                    <i class="fa fa-file"></i>
+                    <span>Templates</span>
+                </a>
+            
+            </li>   
+            
+            <li>    
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-mail-2"></i>
+                    <span>Contato</span>
+                </a>
+            </li>
+        </ul>
+    <nav>
+    <!--Menu-->
