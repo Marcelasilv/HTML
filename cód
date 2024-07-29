@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<meta charset="utf-8">
+<meta name="viewport" content="width-device-width, initial"
+<title>Oficina Somos_Tech</title>
+</html>
+
+</head>
+<body>
+<header class="header">
+    <h1>
+        galeria de fotos Somos_Tech
+    </h1>
+</header>
+<div class="galeria">
+    <img src="https://www.mxparts.com.br/blog/quais-5-melhores-motos-para-trilha-em-2021" alt="https://seguros.elcorteingles.es/nuestras-companias/allianz/moto/_jcr_content/root/container/container/container_1921902396/responsivegrid/informative_banner/image-card/imageDecorinv.coreimg.jpeg/1640089889816/m-bcm-moto-fenix-v1.jpeg">
+</div>
+
+</body>
+</html>
